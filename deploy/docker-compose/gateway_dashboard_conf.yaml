@@ -51,10 +51,10 @@ authentication:
   # if it's default value, when `manager api` start, it will generate a random string to replace it.
   expire_time: 3600     # jwt token expire time, in second
   users:                # yamllint enable rule:comments-indentation
-    - username: admin   # username and password for login `manager api`
-      password: admin
-    - username: user
-      password: user
+    - username: lin   # username and password for login `manager api`
+      password: 389609066
+    - username: EB9BE7246F990690
+      password: eb9be7246f990690
 
 plugins:                          # plugin list (sorted in alphabetical order)
   - api-breaker
