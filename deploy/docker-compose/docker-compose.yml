@@ -17,7 +17,7 @@ services:
     volumes:
       - db-data:/bitnami/mongodb
     ports:
-      - "27017:27017"
+      - "27017"
     networks:
       - laf_shared_network
 
@@ -31,8 +31,8 @@ services:
       - MINIO_DOMAIN=${OSS_DOMAIN}
     command: ["minio", "server", "/data/{0...3}", "--console-address", ":9001"]
     ports:
-      - "9020:9000"
-      - "9120:9001"
+      - "9000"
+      - "9001"
     volumes:
       - oss-data:/data
     networks:
@@ -116,7 +116,7 @@ services:
     volumes:
       - ./gateway_dashboard_conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
     ports:
-      - "9000:9000"
+      - "9000"
     networks:
       - laf_shared_network
       
